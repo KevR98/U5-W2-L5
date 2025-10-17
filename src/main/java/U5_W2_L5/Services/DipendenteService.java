@@ -6,6 +6,7 @@ import U5_W2_L5.Excpetions.NotFoundException;
 import U5_W2_L5.Payload.NewDipendenteRequest;
 import U5_W2_L5.Repository.DipendenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
@@ -83,5 +84,8 @@ public class DipendenteService {
         Dipendente found = this.findById(dipendenteId);
         found.setProfileImageUrl(imageUrl);
         return this.dipendenteRepository.save(found);
+    }
+
+    public Page<Dipendente> findAll(int page, int size, String sortBy) {
     }
 }

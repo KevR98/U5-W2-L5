@@ -29,7 +29,7 @@ public class PrenotazioneService {
     private final DipendenteRepository dipendenteRepository;
 
     @Transactional
-    public Prenotazione savePrenotazione(NewPrenotazioneRequest payload) {
+    public Prenotazione save(NewPrenotazioneRequest payload) {
 
         // Assumo che il record abbia metodi: dipendenteId(), viaggioId(), preferenze(), note()
         Long dipId = payload.dipendente_id();
